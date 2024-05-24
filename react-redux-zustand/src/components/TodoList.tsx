@@ -1,9 +1,10 @@
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../store";
 
 export default function TodoList() {
   // o store é TODO o Store do Redux
   //dentro do store eu posso escolher quais informações eu quero retornar ali de dentro dentro de chaves
-  const todos = useSelector((store) => {
+  // useSelector -> serve para buscar as informações do estado
+  const todos = useAppSelector((store) => {
     return store.todo;
   });
 
